@@ -1,0 +1,18 @@
+<ion-tabs>
+  <ion-tab-bar class="app-tabs" slot="bottom">
+    <ion-tab-button (click)="adsService.rendomAdShow()" tab="upcoming/{{gs.category_id}}">
+      <ion-icon color="secondary" name="hourglass-outline"></ion-icon>
+      <ion-label><b>Upcoming</b></ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="adsService.rendomAdShow()" tab="live/{{gs.category_id}}">
+      <ion-icon color="secondary" name="radio-outline"></ion-icon>
+      <ion-label><b>Live</b></ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="adsService.rendomAdShow()" tab="complated/{{gs.category_id}}">
+      <ion-icon color="secondary" name="time-outline"></ion-icon>
+      <ion-label><b>Completed</b></ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center"><b>DREAM TEAM 11</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="overlay"></div>
+  <ion-grid style="margin-top: -430px;" fixed>
+    <ion-row class="">
+
+      <ion-col offset="3" size="6">
+        <ion-card button (click)="gs.appShare()" class="ion-no-margin ion-text-center main_card">
+          <ion-img src="assets/collaboration.png" style="width: 64px;margin: 12px auto;"></ion-img>
+          <p class="ion-text-capitalize card-labal">
+            <b>Share App</b>
+          </p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card button (click)="gs.rateApp()" class="ion-no-margin ion-text-center main_card">
+          <ion-img src="assets/rating.png" style="width: 64px;margin: 12px auto;"></ion-img>
+          <p class="ion-text-capitalize card-labal">
+            <b>Rate App</b>
+          </p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card button routerLink="/privacy-policy" class="ion-no-margin ion-text-center main_card">
+          <ion-img src="assets/shield.png" style="width: 64px;margin: 12px auto;"></ion-img>
+          <p class="ion-text-capitalize card-labal">
+            <b>Privacy Policy</b>
+          </p>
+        </ion-card>
+      </ion-col>
+      <ion-col offset="3" size="6">
+        <ion-card button (click)="adsService.rendomAdShow()" routerLink="/main-layout"
+          class="ion-no-margin ion-text-center main_card">
+          <ion-img src="assets/start.png" style="width: 64px;margin: 12px auto;"></ion-img>
+          <p class="ion-text-capitalize card-labal">
+            <b style="vertical-align: middle">Start App</b>
+            <ion-icon name="arrow-forward-outline"
+              style="margin-left: 6px;font-size: 20px;vertical-align: middle;color: #f40000;">
+            </ion-icon>
+          </p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><b>Dashboard</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="ion-no-margin costom_box ion-text-center" (click)="viewTeam()">
+          <div class="card-view">
+            <!-- <ion-icon color="secondary" name="keypad-outline"></ion-icon> -->
+            <ion-img src="assets/networking.png" style="width: 80px;margin: auto;"></ion-img>
+          </div>
+          <ion-card-content>
+            All Teams
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-no-margin costom_box ion-text-center" (click)="finalTeam()">
+          <div class="card-view">
+            <!-- <ion-icon color="secondary" name="diamond-outline"></ion-icon> -->
+            <ion-img src="assets/team.png" style="width: 80px;margin: auto;"></ion-img>
+          </div>
+          <ion-card-content>
+            Final Team
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-no-margin costom_box ion-text-center" (click)="goPriview()" botton>
+          <div class="card-view">
+            <!-- <ion-icon color="secondary" name="easel-outline"></ion-icon> -->
+            <ion-img src="assets/preview.png" style="width: 80px;margin: auto;"></ion-img>
+          </div>
+          <ion-card-content>
+            Preview
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-no-margin costom_box ion-text-center" (click)="goPoll()" botton>
+          <div class="card-view">
+            <!-- <ion-icon color="secondary" name="thumbs-down-sharp"></ion-icon>
+            <ion-icon color="secondary" name="thumbs-up-sharp"></ion-icon> -->
+            <ion-img src="assets/opinion.png" style="width: 80px;margin: auto;"></ion-img>
+          </div>
+          <ion-card-content>
+            Poll
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light" href="https://t.me/+BdkyM5Scp3IxYzA9">
+      <ion-img src="assets/telegram.png"></ion-img>
+    </ion-fab-button>
+    <p class="tellyads">AD</p>
+  </ion-fab> -->
+</ion-content>

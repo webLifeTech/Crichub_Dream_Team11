@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><b>DREAM TEAM 11</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- <ion-toolbar *ngIf="gs.allSportCategoryList.length">
+    <ion-segment style="padding: 6px 16PX 0;" scrollable (ionChange)="gs.segmentChanged($event)"
+      [value]="gs.allSportCategoryList[0].category_id">
+      <ng-container *ngFor="let item of gs.allSportCategoryList">
+        <ion-segment-button [disabled]="gs.isDisabled" [value]="item.category_id">
+          <ion-img [src]="item.category_logo" style="width: 24px;"></ion-img>
+          <ion-label class="ion-text-capitalize" style="margin: 0;margin-top: 2px;font-size: 12px;">
+            <b>{{item.category_name}}</b>
+          </ion-label>
+        </ion-segment-button>
+      </ng-container>
+    </ion-segment>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content color="light">
+  <section class="page-box" *ngIf="gs.allSportsMatchList.length">
+    <ion-list-header>
+      <h5>
+        <ion-label><b>Upcoming Matches</b></ion-label>
+      </h5>
+    </ion-list-header>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12" *ngFor="let item of gs.allSportsMatchList">
+          <ion-card button class="ion-no-margin main_card" (click)="goToDashboard(item)">
+            <ion-card-header color="primary" style="padding: 9px;border-bottom: 1px solid #dfdfdf;">
+              <ion-card-subtitle>{{item.tournament_name}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content class="flag-sect">
+              <div style="display: flex;margin-top: 4px;">
+                <ion-note class="team_name">{{item.team1data.team_name}}</ion-note>
+                <ion-note class="team_name2">{{item.team2data.team_name}}</ion-note>
+              </div>
+              <div style="display: flex;margin-top: 6px;">
+                <img [src]="item.team1data.team_logo" alt="" />
+                <span class="small_title"><b>{{item.team1data.team_short_name}}</b></span>
+                <ion-note style="margin: auto;" color="primary">
+                  <span>{{item.match_date | date : 'd MMM, h:mm a'}}</span>
+                </ion-note>
+                <span class="small_title"><b>{{item.team2data.team_short_name}}</b></span>
+                <img [src]="item.team2data.team_logo" alt="" />
+              </div>
+            </ion-card-content>
+            <ion-list-header color="light" style="min-height: 12px;height: 34px;">
+              <ion-label><b>Dream teams</b></ion-label>
+              <ion-button class="ion-text-capitalize">View team</ion-button>
+            </ion-list-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <section class="page-box" *ngIf="!gs.allSportsMatchList.length && gs.isDisabled" style="touch-action: none;">
+    <ion-list-header>
+      <h5>
+        <ion-label><b>Upcoming Matches</b></ion-label>
+      </h5>
+    </ion-list-header>
+    <!-- <ion-list color="light"> -->
+    <ion-card *ngFor="let item of [1,2,3,4,5,6,7]">
+      <div class="ion-padding custom-skeleton">
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="margin-top: 18px;"></ion-skeleton-text>
+      </div>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-thumbnail slot="end">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <p class="ion-text-center">
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <!-- </ion-list> -->
+  </section>
+
+  <section class="page-box" *ngIf="!gs.allSportsMatchList.length && !gs.isDisabled" style="touch-action: none;">
+    <ion-list-header>
+      <h5>
+        <ion-label><b>Upcoming Matches</b></ion-label>
+      </h5>
+    </ion-list-header>
+    <p class="ion-text-center">Match not found!</p>
+  </section>
+
+</ion-content>

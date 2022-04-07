@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button (click)="adsService.rendomAdShow()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><b>View full team</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div style="margin-left: 10px; margin-top: 4px; color: #d40000; font-weight: bold;">
+    <small>Note : Final team coming after toss!</small>
+  </div>
+  <div class="global_img">
+    <ion-card class="ion-text-center">
+      <img *ngIf="gs.teamImage" [src]="gs.teamImage" alt="" />
+      <img *ngIf="!gs.teamImage" src="assets/upcomming.png" alt="" />
+    </ion-card>
+  </div>
+</ion-content>

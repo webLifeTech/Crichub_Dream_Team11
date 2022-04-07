@@ -1,0 +1,21 @@
+.flag-sect{
+    img{
+        width: 40px;
+        height: 40px;
+    }
+}
+.small_title{
+    margin: 12px 8px 8px 6px;
+    font-size: 13px;
+    color: black;
+}
+ion-segment-button {
+    --indicator-height: 4px;
+    --color:#797979;
+    ion-label{
+        --color:#787878;
+    }
+}
+.segment-button-checked{
+    --color:#2d2e87;
+}

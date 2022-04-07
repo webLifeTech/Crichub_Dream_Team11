@@ -1,0 +1,62 @@
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.costom_box {
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+}
+
+.overlay{
+    height: 190px;
+    background: linear-gradient(45deg, #cf0000, #fb0000);
+    box-shadow: rgb(0 0 0 / 15%) 0px 6px 9px 0px;
+    border-radius: 0 0 24px 24px;
+}
+
+.page-box{
+    margin-bottom: 75px!important;
+}
+
+.main_card{
+    .team_name{
+        color: #000000;
+        font-size: 14px;
+        padding: 0 3px;
+        // margin-left: 8px;
+    }
+    .team_name2{
+        color: #000000;
+        margin-left: auto;
+        font-size: 14px;
+        padding: 0 3px;
+        // margin-right: 8px;
+    }
+}
+
+.update_action{
+    .dark{
+        color: #000000;
+    }
+}
+
+.tellyads{
+    position: absolute;
+    bottom: -8px;
+    right: -4px;
+    border: 0.5px solid;
+    font-size: 8px;
+    padding: 1px;
+    color: black;
+}
